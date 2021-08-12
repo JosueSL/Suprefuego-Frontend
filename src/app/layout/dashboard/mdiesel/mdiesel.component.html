@@ -1,0 +1,172 @@
+<div class="row text-center">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-4">
+                <div #divCylinder class="card margenes divSize border">
+                    <fusioncharts class="graficos margenes" height="230" type="Cylinder" [dataSource]="tanqueAgua">
+                    </fusioncharts>
+                    <button pButton pRipple type="button" (click)="showHisTanque()" label="..."
+                        class="p-button-secondary p-button-text"></button>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div #divGauge class="card margenes divSize border">
+                    <fusioncharts class="graficos margenes" height="230" type="angulargauge"
+                        [dataSource]="presionSistema">
+                    </fusioncharts>
+                    <button pButton pRipple type="button" (click)="showHisPresion()" label="..."
+                        class="p-button-secondary p-button-text"></button>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="card divSize margenes border">
+                    <div class="container" style="margin-top: 25%;">
+                        <h3>{{time}}</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-8">
+                <h4>Motor</h4>
+                <div #divMotor class="card border">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <img src="assets/img/motor/electrico.png" width="95%">
+                        </div>
+                        <div class="col-sm-6" style="margin-top: 10%;">
+                            <div class="col-sm-12">
+                                <p-selectButton disabled="false" [options]="stateOptions" [(ngModel)]="ioMotor"
+                                optionLabel="label" optionValue="value"></p-selectButton>
+                            </div>
+                            <br>
+                           <div class="col-sm-12">
+                            <fusioncharts class="graficos margenes" height="80" width="70%" type="hlineargauge"
+                            [dataSource]="estadoMotor">
+                        </fusioncharts>
+                           </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <h4>Bomba Jockey</h4>
+                <div #divBomba class="card border">
+                    <div class="row">
+                        <div class="col-sm-8">
+                            <img src="assets/img/motor/bombajockey.jpg" width="80%">
+                        </div>
+                        <div class="col-sm-4" style="margin-top: 10%;">
+                            <p-inputSwitch disabled="true" [(ngModel)]="ioBomba"></p-inputSwitch>
+                        </div>
+                    </div>
+                </div>
+                <div style="margin-top: 5%;">
+                    <img src="assets/img/logo/SupreFuego.png" width="100%">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <br>
+    </div>
+</div>
+
+<div *ngIf="errorMotor" class="card border-danger mb-3 shadow-sm linea90"
+    style="max-width: 10rem; position: absolute; bottom: 35%; left: 25%;">
+    <div class="card-body text-danger">
+    </div>
+</div>
+
+
+<div *ngIf="errorMotor" class="card border-danger mb-3 shadow-sm rounded"
+    style="width: 15%; height: 5%; position: absolute; bottom: 40%; left: 20%;">
+    <div class="card-body text-danger row">
+        <div class="col-sm-8" style="margin-top: -5%;">Common</div>
+        <div class="spinner-grow text-danger col-sm-4" style="margin-top: -7%;" role="status">
+            <span class="visually-hidden">Falla</span>
+        </div>
+    </div>
+</div>
+
+<div *ngIf="errorMotor" class="card border-danger mb-3 shadow-sm linea45"
+    style="max-width: 10rem; position: absolute; bottom: 32%; left: 3%;">
+    <div class="card-body text-danger">
+    </div>
+</div>
+
+<div *ngIf="errorMotor" class="card border-danger mb-3 shadow-sm rounded"
+    style="width: 15%; height: 5%; position: absolute; bottom: 35%; left: -3%;">
+    <div class="card-body text-danger row">
+        <div class="col-sm-8" style="margin-top: -5%;">Fail to Start</div>
+        <div class="spinner-grow text-danger col-sm-4" style="margin-top: -7%;" role="status">
+            <span class="visually-hidden">Falla</span>
+        </div>
+    </div>
+</div>
+
+<div *ngIf="errorMotor" class="card border-success mb-3 shadow-sm linea"
+    style="max-width: 10rem; position: absolute; bottom: 15%; left: -5%;">
+    <div class="card-body text-success">
+    </div>
+</div>
+
+<div *ngIf="errorMotor" class="card border-success mb-3 shadow-sm rounded"
+    style="width: 15%; height: 5%; position: absolute; bottom: 13%; left: -15%;">
+    <div class="card-body text-success row">
+        <div class="col-sm-8" style="margin-top: -5%;">Engine run</div>
+        <div class="spinner-grow text-success col-sm-4" style="margin-top: -7%;" role="status">
+            <span class="visually-hidden">Falla</span>
+        </div>
+    </div>
+</div>
+
+<div *ngIf="errorTanque" class="card border-danger mb-3 shadow-sm"
+    style="max-width: 10rem; position: absolute; top: 20%; left: -6%;">
+    <div class="card-header"
+        style="background-color: rgba(189, 32, 46, 1); color: white; font-size: 15px; height: 15%;">Low Water Level
+    </div>
+    <div class="card-body text-danger">
+        <div class="spinner-grow text-danger" role="status">
+            <span class="visually-hidden">Falla</span>
+        </div>
+    </div>
+</div>
+
+<div *ngIf="errorPresion" class="card border-danger mb-3 shadow-sm"
+    style="max-width: 10rem; position: absolute; top: 1%; left: 45%;">
+    <div class="card-header"
+        style="background-color: rgba(189, 32, 46, 1); color: white; font-size: 15px; height: 15%;">System Pressure
+    </div>
+    <div class="card-body text-danger">
+        <div class="spinner-grow text-danger" role="status">
+            <span class="visually-hidden">Falla</span>
+        </div>
+    </div>
+</div>
+
+<div *ngIf="errorBomba" class="card border-danger mb-3 shadow-sm"
+    style="max-width: 10rem; position: absolute; bottom: 35%; right: -6%;">
+    <div class="card-header"
+        style="background-color: rgba(189, 32, 46, 1); color: white; font-size: 15px; height: 15%;">Power Failure</div>
+    <div class="card-body text-danger">
+        <div class="spinner-grow text-danger" role="status">
+            <span class="visually-hidden">Falla</span>
+        </div>
+    </div>
+</div>
+
+<p-sidebar [(visible)]="showHtanque" [fullScreen]="true" [baseZIndex]="10000">
+    <h3>Historico de niveles de tanque</h3>
+    <br>
+    <app-htanque></app-htanque>
+</p-sidebar>
+
+<p-sidebar [(visible)]="showHpresion" [fullScreen]="true" [baseZIndex]="10000">
+    <h3>Historico de presion del sistema</h3>
+    <br>
+    <app-hpresion></app-hpresion>
+</p-sidebar>

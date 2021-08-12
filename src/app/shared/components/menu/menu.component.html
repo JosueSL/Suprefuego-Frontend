@@ -1,0 +1,12 @@
+<nav class="navbar sticky-top navbar-light bg-light">
+    <div class="container-fluid menuBack">
+        <button type="button textBtn" class="btn" (click)="showMenu()"><i class="pi pi-bars"></i></button>
+    </div>
+  </nav>
+
+  <p-dialog header="Long Content" [(visible)]="displayMenu" [style]="{width: '50vw'}" [baseZIndex]="10000">
+    
+    <ng-template pTemplate="footer">
+        <p-button icon="pi pi-check" (click)="displayMenu=false" label="Ok" styleClass="p-button-text"></p-button>
+    </ng-template>
+</p-dialog>

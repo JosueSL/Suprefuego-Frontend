@@ -1,0 +1,8 @@
+<p-tabMenu [model]="items" [activeItem]="items[indexActive]" styleClass="backTop">
+    <ng-template pTemplate="item" let-item let-i="index">
+        {{item.label}}
+    </ng-template>
+</p-tabMenu>
+<div class="container back shadow-lg p-3" >
+    <router-outlet></router-outlet>
+</div>
