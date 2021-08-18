@@ -141,7 +141,6 @@ export class MdieselComponent implements OnInit, AfterViewInit, OnDestroy {
         baseFontSize: "13",
         caption: 'Nivel de tanque de agua',
         captionFontBold: "4",
-        subcaption: "Max: " + 100 + " %",
         lowerLimit: "0",
         upperLimit: 100,
         lowerLimitDisplay: "0 %",
@@ -164,7 +163,6 @@ export class MdieselComponent implements OnInit, AfterViewInit, OnDestroy {
     this.presionSistema = {
       chart: {
         caption: "Presion del sistema",
-        subcaption: "Last week",
         lowerLimit: "0",
         upperLimit: "300",
         theme: "fusion",

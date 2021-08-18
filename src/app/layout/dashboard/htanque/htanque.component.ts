@@ -19,7 +19,8 @@ export class HtanqueComponent implements OnInit {
           caption: "Agua",
           subCaption: "2021-01-01 - 2021-07-31",
           xAxisName: "Tiempo",
-          yAxisName: "Nivel de tanque"
+          yAxisName: "Nivel de tanque",
+          palettecolors: "00aeef"
       },
       data: [{
               label: "Ene",

@@ -6,21 +6,25 @@ import { MenuComponent } from './components/menu/menu.component';
 import { TabViewModule } from 'primeng/tabview';
 import { DialogModule } from 'primeng/dialog';
 import { ButtonModule } from 'primeng/button';
-
+import { SidebarModule } from 'primeng/sidebar';
+// FONT AWESOME
+// import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
   declarations: [
     FooterComponent,
-    MenuComponent,
+    MenuComponent
   ],
   exports: [
     FooterComponent,
-    MenuComponent,],
+    MenuComponent
+  ],
   imports: [
     CommonModule,
     TabViewModule,
     DialogModule,
-    ButtonModule
+    ButtonModule,
+    SidebarModule
   ]
 })
 export class SharedModule { }

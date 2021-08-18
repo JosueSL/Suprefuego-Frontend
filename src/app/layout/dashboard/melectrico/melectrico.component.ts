@@ -142,7 +142,6 @@ export class MelectricoComponent implements OnInit, AfterViewInit, OnDestroy {
         baseFontSize: "13",
         caption: 'Nivel de tanque de agua',
         captionFontBold: "4",
-        subcaption: "Max: " + 100 + " %",
         lowerLimit: "0",
         upperLimit: 100,
         lowerLimitDisplay: "0 %",

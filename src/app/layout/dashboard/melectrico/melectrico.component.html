@@ -40,14 +40,14 @@
                         <div class="col-sm-6" style="margin-top: 10%;">
                             <div class="col-sm-12">
                                 <p-selectButton disabled="false" [options]="stateOptions" [(ngModel)]="ioMotor"
-                                optionLabel="label" optionValue="value"></p-selectButton>
+                                    optionLabel="label" optionValue="value"></p-selectButton>
                             </div>
                             <br>
-                           <div class="col-sm-12">
-                            <fusioncharts class="graficos margenes" height="80" width="70%" type="hlineargauge"
-                            [dataSource]="estadoMotor">
-                        </fusioncharts>
-                           </div>
+                            <!-- <div class="col-sm-12">
+                                <fusioncharts class="graficos margenes" height="80" width="70%" type="hlineargauge"
+                                    [dataSource]="estadoMotor">
+                                </fusioncharts>
+                            </div> -->
                         </div>
                     </div>
                 </div>
@@ -65,7 +65,7 @@
                     </div>
                 </div>
                 <div style="margin-top: 5%;">
-                    <img src="assets/img/logo/SupreFuego.png" width="100%">
+                    <img src="assets/img/logo/logo.png" width="100%">
                 </div>
             </div>
         </div>
@@ -121,13 +121,13 @@
     </div>
 </div>
 
-<p-sidebar [(visible)]="showHtanque" [fullScreen]="true" [baseZIndex]="10000">
+<p-sidebar [(visible)]="showHtanque" [fullScreen]="true" [baseZIndex]="1000" [modal]="false">
     <h3>Historico de niveles de tanque</h3>
     <br>
     <app-htanque></app-htanque>
 </p-sidebar>
 
-<p-sidebar [(visible)]="showHpresion" [fullScreen]="true" [baseZIndex]="10000">
+<p-sidebar [(visible)]="showHpresion" [fullScreen]="true" [baseZIndex]="1000" [modal]="false">
     <h3>Historico de presion del sistema</h3>
     <br>
     <app-hpresion></app-hpresion>

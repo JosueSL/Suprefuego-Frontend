@@ -20,6 +20,7 @@ import {ButtonModule} from 'primeng/button';
 import {SidebarModule} from 'primeng/sidebar';
 import {CalendarModule} from 'primeng/calendar';
 import {SelectButtonModule} from 'primeng/selectbutton';
+import {ChartModule} from 'primeng/chart';
 //COMPONENTES
 import { DashboardComponent } from './dashboard.component';
 import { MdieselComponent } from './mdiesel/mdiesel.component';
@@ -49,7 +50,8 @@ FusionChartsModule.fcRoot(FusionCharts, charts, FusionTheme, Widgets);
     ButtonModule,
     SidebarModule,
     CalendarModule,
-    SelectButtonModule
+    SelectButtonModule,
+    ChartModule
   ],
   providers: [MessageService]
 })
