@@ -7,6 +7,7 @@ import { TabViewModule } from 'primeng/tabview';
 import { DialogModule } from 'primeng/dialog';
 import { ButtonModule } from 'primeng/button';
 import { SidebarModule } from 'primeng/sidebar';
+import { DockModule } from 'primeng/dock';
 // FONT AWESOME
 // import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
@@ -24,7 +25,8 @@ import { SidebarModule } from 'primeng/sidebar';
     TabViewModule,
     DialogModule,
     ButtonModule,
-    SidebarModule
+    SidebarModule,
+    DockModule
   ]
 })
 export class SharedModule { }

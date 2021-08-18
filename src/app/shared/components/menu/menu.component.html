@@ -1,6 +1,5 @@
-<nav class="navbar sticky-top navbar-light bg-light" >
-    <div class="container-fluid menuBack">
-        <button type="button textBtn"class="btn" (click)="showMenu()"><i class="pi pi-bars"></i></button>
-    </div>
-</nav>
-
+<p-dock [model]="dockItems" position="left" >
+    <ng-template pTemplate="item" let-item>
+        <img [src]="item.icon" [alt]="item.label" width="100%">
+    </ng-template>
+</p-dock>
