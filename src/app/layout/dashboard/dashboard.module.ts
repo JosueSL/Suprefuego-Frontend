@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import {LayoutModule} from '@angular/cdk/layout';
+import { LayoutModule } from '@angular/cdk/layout';
 import { FormsModule } from '@angular/forms';
 // ROUTING
 import { DashboardRoutingModule } from './dashboard-routing.module';
@@ -11,16 +11,16 @@ import * as charts from "fusioncharts/fusioncharts.charts";
 import * as FusionTheme from "fusioncharts/themes/fusioncharts.theme.fusion";
 import * as Widgets from 'fusioncharts/fusioncharts.widgets';
 // PRIMENG
-import {CardModule} from 'primeng/card';
-import {TabMenuModule} from 'primeng/tabmenu';
-import {ToastModule} from 'primeng/toast';
-import {MessageService} from 'primeng/api';
-import {InputSwitchModule} from 'primeng/inputswitch';
-import {ButtonModule} from 'primeng/button';
-import {SidebarModule} from 'primeng/sidebar';
-import {CalendarModule} from 'primeng/calendar';
-import {SelectButtonModule} from 'primeng/selectbutton';
-import {ChartModule} from 'primeng/chart';
+import { CardModule } from 'primeng/card';
+import { TabMenuModule } from 'primeng/tabmenu';
+import { ToastModule } from 'primeng/toast';
+import { MessageService } from 'primeng/api';
+import { InputSwitchModule } from 'primeng/inputswitch';
+import { ButtonModule } from 'primeng/button';
+import { SidebarModule } from 'primeng/sidebar';
+import { CalendarModule } from 'primeng/calendar';
+import { SelectButtonModule } from 'primeng/selectbutton';
+import { ChartModule } from 'primeng/chart';
 //COMPONENTES
 import { DashboardComponent } from './dashboard.component';
 import { MdieselComponent } from './mdiesel/mdiesel.component';

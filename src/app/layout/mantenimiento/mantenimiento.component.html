@@ -1,0 +1,18 @@
+<div class="container back shadow-lg p-3">
+  <div class="container row">
+    <div class="col-sm-1"></div>
+    <nav *ngFor="let item of itemMenu" class="col-sm-2" >
+      <div  class="card overCard" [routerLink]="item.url" routerLinkActive="active">
+        <p-card styleClass="overCard active">
+          <p >{{item.titulo}}</p>
+          <i [class]="item.icon" style="font-size: 2rem"></i>
+        </p-card>
+      </div>
+    </nav>
+    <div class="col-sm-1"></div>
+  </div>
+  <hr>
+    <div class="card container">
+      <router-outlet></router-outlet>
+    </div>
+</div>

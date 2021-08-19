@@ -5,3 +5,15 @@
     width: 100% !important;
     background-size: cover;
 }
+
+.overCard:hover{
+    cursor: pointer;
+    background-color: #00aced;
+    color: white;
+}
+
+nav > div.active {
+    background-color: #00aced;
+    border: solid 3px;
+    border-color: #00aced;
+  }

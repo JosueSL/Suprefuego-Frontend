@@ -32,8 +32,19 @@ export class MenuComponent implements OnInit {
           positionTop: -15,
           positionLeft: 15
         },
-        routerLink: 'dashboard/'+localStorage.getItem('motor'),
+        routerLink: 'mantenimiento/empresa',
         icon: "assets/img/menu/settings.png"
+      },
+      {
+        label: 'REPORTES',
+        tooltipOptions: {
+          tooltipLabel: "Reportes",
+          tooltipPosition: 'left',
+          positionTop: -15,
+          positionLeft: 15
+        },
+        routerLink: 'dashboard/'+localStorage.getItem('motor'),
+        icon: "assets/img/menu/report.png"
       },
       {
         label: 'ACERCA DE',
@@ -45,6 +56,17 @@ export class MenuComponent implements OnInit {
         },
         routerLink:'dashboard/'+localStorage.getItem('motor'),
         icon: "assets/img/menu/about.png"
+      },
+      {
+        label: 'CERRAR SESIN',
+        tooltipOptions: {
+          tooltipLabel: "Cerras sesion",
+          tooltipPosition: 'left',
+          positionTop: -15,
+          positionLeft: 15
+        },
+        routerLink:'dashboard/'+localStorage.getItem('motor'),
+        icon: "assets/img/menu/io.png"
       }
     ];
   }

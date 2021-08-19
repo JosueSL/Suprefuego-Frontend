@@ -13,8 +13,12 @@ export const routes: Routes = [
         , pathMatch: 'full'
       },
       {
-        path: ''
+        path: 'dashboard'
         , loadChildren: () => import('./layout/dashboard/dashboard-routing.module').then(m => m.DashboardRoutingModule)
+      },
+      {
+        path: 'mantenimiento'
+        , loadChildren: () => import('./layout/mantenimiento/mantenimiento-routing.module').then(m => m.MantenimientoRoutingModule)
       }
     ]
   },
