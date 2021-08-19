@@ -6,7 +6,7 @@ import { MelectricoComponent } from './melectrico/melectrico.component';
 
 const routes: Routes = [
     {
-      path: '',
+      path: 'dashboard',
       component: DashboardComponent,
       children: [
         {

@@ -9,11 +9,11 @@ export const routes: Routes = [
     , children: [
       {
         path: ''
-        , redirectTo: `inicio/${localStorage.getItem('motor')}`
+        , redirectTo: `dashboard/${localStorage.getItem('motor')}`
         , pathMatch: 'full'
       },
       {
-        path: 'inicio'
+        path: ''
         , loadChildren: () => import('./layout/dashboard/dashboard-routing.module').then(m => m.DashboardRoutingModule)
       }
     ]

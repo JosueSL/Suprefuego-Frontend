@@ -14,22 +14,43 @@ export class MenuComponent implements OnInit {
   ngOnInit(): void {
     this.dockItems = [
       {
-          label: 'DASHBOARD',
-          icon: "assets/img/menu/dashboard.svg"
+        label: 'DASHBOARD',
+        tooltipOptions: {
+          tooltipLabel: "Dashboard",
+          tooltipPosition: 'left',
+          positionTop: -15,
+          positionLeft: 15
+        },
+        routerLink:'dashboard/'+localStorage.getItem('motor'),
+        icon: "assets/img/menu/dashboard.svg"
       },
       {
-          label: 'MANTENIMIENTO',
-          icon: "assets/img/menu/settings.png"
+        label: 'MANTENIMIENTO',
+        tooltipOptions: {
+          tooltipLabel: "Mantenimiento",
+          tooltipPosition: 'left',
+          positionTop: -15,
+          positionLeft: 15
+        },
+        routerLink: 'dashboard/'+localStorage.getItem('motor'),
+        icon: "assets/img/menu/settings.png"
       },
       {
-          label: 'ACERCA DE',
-          icon: "assets/img/menu/about.png"
+        label: 'ACERCA DE',
+        tooltipOptions: {
+          tooltipLabel: "Acerca de",
+          tooltipPosition: 'left',
+          positionTop: -15,
+          positionLeft: 15
+        },
+        routerLink:'dashboard/'+localStorage.getItem('motor'),
+        icon: "assets/img/menu/about.png"
       }
-  ];
+    ];
   }
-  
+
   showMenu() {
     this.displayMenu = true;
-}
+  }
 
 }
