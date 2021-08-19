@@ -8,6 +8,7 @@ import { MantenimientoRoutingModule } from './mantenimiento-routing.module';
 import {TableModule} from 'primeng/table';
 import { CardModule } from 'primeng/card';
 import {SpeedDialModule} from 'primeng/speeddial';
+import {SidebarModule} from 'primeng/sidebar';
 //COMPONENTES
 import { EmpresaComponent } from './empresa/empresa.component';
 import { UnidadesComponent } from './unidades/unidades.component';
@@ -15,7 +16,7 @@ import { TipomotorComponent } from './tipomotor/tipomotor.component';
 import { SenialesComponent } from './seniales/seniales.component';
 import { TanqueComponent } from './tanque/tanque.component';
 import { MantenimientoComponent } from './mantenimiento.component';
-import { FormComponent } from './empresa/form/form.component';
+import { FormempresaComponent } from './empresa/formempresa/formempresa.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,7 @@ import { FormComponent } from './empresa/form/form.component';
     TipomotorComponent,
     SenialesComponent,
     TanqueComponent,
-    FormComponent
+    FormempresaComponent
   ],
   imports: [
     FormsModule,
@@ -34,7 +35,8 @@ import { FormComponent } from './empresa/form/form.component';
     MantenimientoRoutingModule,
     CardModule,
     TableModule,
-    SpeedDialModule
+    SpeedDialModule,
+    SidebarModule
   ],
   providers: []
 })

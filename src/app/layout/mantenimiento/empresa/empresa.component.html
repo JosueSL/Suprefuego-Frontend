@@ -1,6 +1,6 @@
 <br>
 <div style="margin-bottom: 10%;">
-    <p-speedDial  radius="80" direction="up" type="semi-circle"></p-speedDial>
+    <p-speedDial (onClick)="showForm()" radius="80" direction="up" type="semi-circle"></p-speedDial>
 </div>
 
 <table class="table table table-striped table-sm">
@@ -32,3 +32,7 @@
       </tr>
     </tbody>
   </table>
+
+  <p-sidebar styleClass="p-sidebar-lg" [(visible)]="displayForm" position="right" [baseZIndex]="10000" [modal]="false">
+    <app-formempresa></app-formempresa>
+</p-sidebar>
