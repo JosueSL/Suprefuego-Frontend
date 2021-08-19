@@ -1,8 +1,10 @@
 <div class="card">
+    <br>
     <div class="p-field p-col-12 p-md-8">
         <p-calendar [(ngModel)]="rangeDates" selectionMode="range" [readonlyInput]="true" inputId="range"></p-calendar>
     </div>
     <br><br>
-    <fusioncharts type="area2d" width="80%" height="600" [dataSource]="dataSource">
-    </fusioncharts>
+    <div style="margin-left: 5%;">
+        <p-chart type="line" width="90vw" height="60vh" [data]="dataSource"></p-chart>
+    </div>
 </div>

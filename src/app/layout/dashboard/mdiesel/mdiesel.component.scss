@@ -48,16 +48,16 @@
   }
 
   .linea45 {
-    transform: rotate(45deg);
+    transform: rotate(15deg);
     position: relative;
     border-top: 1px solid black;
     height: 2px;
-    width: 7%;
+    width: 10%;
   }
 
   .linea90 {
     transform: rotate(90deg);
-    position: relative;
+    position: absolute;
     border-top: 1px solid black;
     height: 2px;
     width: 7%;
