@@ -7,9 +7,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EmpresaComponent implements OnInit {
 
-  constructor() { }
+  displayForm: boolean;
+  constructor() {
+    this.displayForm = false;
+  }
 
   ngOnInit(): void {
+  }
+
+  showForm() {
+    this.displayForm = true;
   }
 
 }
